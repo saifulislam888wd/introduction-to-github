@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Attribute Selector</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+a[target] {
+  text-decoration: none;
+  color: red;
+}
+a[target='_self'] {
+  color: plum;
+}
+a[title~='Pro'] {
+  color: aqua;
+  font-weight: bold;
+  font-size: 35px;
+}
+a[title~='BD'] {
+  color: purple;
+  font-weight: normal;
+  font-size: 25px;
+}
+div[class|='child'] {
+  width: 300px;
+  height: 200px;
+  background: #8c7ae6;
+}
+div[class^='child'] {
+  width: 300px;
+  height: 200px;
+  background: #e1b12c;
+  margin-bottom: 5px;
+}
+div[class$='ial'] {
+  background: #8c7ae6;
+}
+div[class*='erv'] {
+  background: #e84118;
+}
+</head>
+
+<body>
+  <a href="#" title="Pro Coder">Procoder</a>
+  <a href="#" target="_blank">Procoder</a>
+  <a href="#" title="Pro Coder  BD">Procoder</a>
+  <a href="#" target="_self">Procoder</a>
+  <a href="#" title="Pro Coder">Procoder</a>
+  <a href="#" title="Pro Coder BD">Procoder</a>
+  <a href="#">Procoder</a>
+  <a href="#">Procoder</a>
+  <a href="#" target="_blank">Procoder</a>
+  <a href="#">Procoder</a>
+
+  <div id="service">
+    <div class="child_service">
+
+    </div>
+    <div class="child-service">
+      Working
+
+    </div>
+  </div>
+
+  <div id="testimonial">
+    <div class="child-testimonial">
+      Working
+    </div>
+    <div class="child_testimonial"></div>
+  </div>
+
+
+</body>
+
+</html>
